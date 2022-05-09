@@ -9,11 +9,13 @@
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     rel="stylesheet"
   />
+  <script src="https://kit.fontawesome.com/ff9375734e.js" crossorigin="anonymous"></script>
   <!-- Bootswatch Darkly Theme -->
   <link
     href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
     rel="stylesheet"
   />
+  <link rel="stylesheet" href="./css/estilos.css">
   <title>JS Todo List</title>
 </head>
 <body>
@@ -35,28 +37,31 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">
-            Home <span class="sr-only">(current)</span>
+            Inicio <span class="sr-only">(current)</span>
           </a>
         </li>
       </ul>
+      <div>
+        <h1 class="task-header-title" id="fecha"></h1>
+      </div>
       <form class="form-inline my-2 my-lg-0" id="filters">
-        <label class="font-weight-bold text-info mr-3">Filters</label>
+        <label class="font-weight-bold text-info mr-3">Filtros</label>
         <input type="radio" name="type" value="all" class="mx-1">
-        <label for="male" class="mb-0">All</label>
+        <label for="male" class="mb-0">Todos</label>
         <input type="radio" name="type" value="completed" class="mx-1">
-        <label for="female" class="mb-0">Completed</label>
+        <label for="female" class="mb-0">Completado</label>
         <input type="radio" name="type" value="uncompleted" class="mx-1">
-        <label for="other" class="mr-2 mb-0">Uncompleted</label> 
+        <label for="other" class="mr-2 mb-0">Pendiente</label> 
 
         <input
           class="form-control mr-sm-2"
           type="search"
           name="words"
-          placeholder="Words"
+          placeholder="Palabras"
           aria-label="Search"
         >
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="search">
-          Search
+          Buscar
         </button>
       </form>
     </div>
@@ -169,14 +174,17 @@
         <table class="table table-striped" id="table">
           <thead>
             <tr>
-              <th scope="col">Todo</th>
-              <th scope="col">Description</th>
+              <th scope="col">Tarea</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col" >Fecha</th>
               <th scope="col">
                 <div class="d-flex justify-content-center">
-                  Completed
+                  Completado
                 </div>
               </th>
               <th scope="col"></th>
+              <th scope="col"></th>
+
             </tr>
           </thead>
           <tbody>
